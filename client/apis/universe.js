@@ -1,7 +1,7 @@
 import request from 'superagent'
 
 // *** get image ***
-export function FetchCharacter() {
+export function getNasaImage() {
   return request
     .get(`https://api.nasa.gov/planetary/apod/?date=${Date}`)
     .then((response) => {

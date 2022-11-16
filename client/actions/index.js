@@ -1,17 +1,17 @@
-import { getFruits } from '../apis/fruits'
+import { getNasaImage } from '../apis/universe'
 
 export const SET_FRUITS = 'SET_FRUITS'
 
-export function setFruits(fruits) {
+export function setImage(fruits) {
   return {
     type: SET_FRUITS,
     payload: fruits,
   }
 }
 
-export function fetchFruits() {
+export function fetchImage() {
   return (dispatch) => {
-    return getFruits().then((fruits) => {
+    return getNasaImage().then((fruits) => {
       dispatch(setFruits(fruits))
     })
   }
