@@ -6,6 +6,9 @@ import LoveLetter from './Loveletters.jsx'
 import { getPoem } from '../apis/universe'
 
 function Poem() {
+  let names = useSelector((state) => state)
+
+  console.log(names)
   // const { id } = useParams()
   // const dispatch = useDispatch()
   // useEffect(() => {
@@ -19,9 +22,18 @@ function Poem() {
           <div className="Poem">
             <div className="fas fa-quote-right fa-quote"></div>
             <div className="fas fa-quote-left fa-quote"></div>
+            {/* {names.map((names) => {
+              return (
+                <> */}
             <p className="Letter">{/* database */}</p>
-            <h1>Dear {} </h1>
-            <LoveLetter letter="testing" />
+            <LoveLetter
+              name1={names.NameOne}
+              name2={names.NameTwo}
+              letter="testing"
+            />
+            {/* </>
+              )
+            })} */}
             <div className="buttons">
               <button>Print</button>
               <button>Share</button>

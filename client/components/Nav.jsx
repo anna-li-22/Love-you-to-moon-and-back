@@ -1,19 +1,18 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
+import { Link, useNavigate } from 'react-router-dom'
 import { fetchImage } from '../actions'
 
 function App() {
   return (
     <>
       <div className="navbar">
-        <a href="#">Home</a>
-
-        <a href="#">News</a>
-
-        <a href="#">Contact</a>
-
-        <a href="#">About</a>
+        <Link to="/">
+          <p>Home</p>
+        </Link>
+        <Link to="/">
+          <p>About</p>
+        </Link>
       </div>
     </>
   )
