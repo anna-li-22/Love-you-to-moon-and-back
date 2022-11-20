@@ -34,6 +34,7 @@ body{
 }
 /* iput */
 .input{
+  margin-top: 5%;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -79,17 +80,28 @@ img{
   display: flex;
   justify-content: space-around;
 }
-.submit{
+.form_container{
+  height: 200px;
+  position: relative;
+
+}
+
+/* button */
+button.submit{  
+  position: absolute;
+  top:30%;
+  left: 70%;
   width: 70px;
   height: 70px;
-  align-items: center;
-  background:red;
-  position:relative;
-  box-shadow: 0 0 20px #ff155f,
-  0 0 60px #ff155f;
+  background:#C85250;
+  box-shadow: 0 0 20px #E7625F
+  ,
+  0 0 60px #E7625F
+  ;
   transform: rotate(-45deg);
   animation: heart 2s linear infinite 0.2s alternate
 }
+
 @keyframes heart{
   0%{ transform: rotate(-45deg) scale(0.5);
   }
@@ -103,7 +115,7 @@ img{
   position:absolute;
   width:100%;
   height:100%;
-  background:red;
+  background:#C85250;
   border-radius: 50%;
   left:0;
   top:-50%;
@@ -113,7 +125,7 @@ img{
   position:absolute;
   width:100%;
   height:100%;
-  background:red;
+  background:#C85250;
   border-radius: 50%;
   top:0;
   right:-50%;
