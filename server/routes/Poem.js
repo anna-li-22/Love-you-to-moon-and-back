@@ -7,6 +7,9 @@ router.get('/', (req, res) => {
   db.getPoem()
     .then((poem) => {
       console.log(poem)
+      // const RandomPoem = Math.floor(Math.random() * poem.length)
+      poem.sort(() => 0.5 - Math.random())
+      console.log(poem)
       res.json(poem)
     })
     .catch((err) => {

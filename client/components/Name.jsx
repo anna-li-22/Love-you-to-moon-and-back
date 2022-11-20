@@ -1,13 +1,40 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchImage } from '../actions'
+import { addName } from '../actions'
 import { Link } from 'react-router-dom'
 
 function Name() {
+  const [newNameOne, setNewNameOne] = useState('')
+  const [newNameTwo, setNewNameTwo] = useState('')
+
+  const dispatch = useDispatch()
+  // const navigate = useNavigate()
+
+  const [isLoading, setIsLoading] = useState(true)
   // const dispatch = useDispatch()
   // useEffect(() => {
   //   dispatch(fetchImage())
   // }, [])
+  function handleChange(event) {
+    event.preventDefault()
+    // console.log(event.target.value)
+    setNewNameOne(event.target.value)
+  }
+  function handleChangeTwo(event) {
+    event.preventDefault()
+    // console.log(event.target.value)
+    setNewNameTwo(event.target.value)
+  }
+  function handleSubmit(event) {
+    dispatch(
+      addName({
+        NameOne: newNameOne,
+        NameTwo: newNameTwo,
+      })
+    )
+    console.log(newNameOne)
+    event.preventDefault()
+  }
 
   return (
     <>
@@ -19,15 +46,28 @@ function Name() {
               <label type="submit" htmlFor="name1">
                 From
               </label>
-              <input className="name1"></input>
+              <input
+                type="text"
+                aria-label="NewFoxName"
+                value={newNameOne}
+                onChange={handleChange}
+                className="name1"
+              ></input>
             </div>
             <div className="input">
               <label htmlFor="name2">To</label>
-              <input type="textbox" className="name2" size="10"></input>
+              <input
+                type="text"
+                aria-label="NewFoxName"
+                value={newNameTwo}
+                onChange={handleChangeTwo}
+                className="name2"
+                size="10"
+              ></input>
             </div>
             <br></br>
             <Link to="/poem">
-              <button className="submit"></button>
+              <button onClick={handleSubmit} className="submit"></button>
             </Link>
           </form>
         </div>
