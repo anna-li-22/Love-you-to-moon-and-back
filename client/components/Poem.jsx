@@ -8,7 +8,7 @@ import LoveLetter from './Loveletters.jsx'
 import { getUniverseImage, getPoem } from '../apis/universe'
 
 function Poem() {
-  // const names = useSelector((state) => state.name)
+  const bg = useSelector((state) => state.name)
 
   // console.log(names)
   const [UniImage, setImage] = useState('')
@@ -42,11 +42,11 @@ function Poem() {
       >
         <div className="poem_container">
           <div className="letter">
-            <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+            {/* <DropdownButton id="dropdown-basic-button" title="Dropdown button">
               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
               <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-            </DropdownButton>
+            </DropdownButton> */}
             <div className="fas fa-quote-right fa-quote">“</div>
             <div className="fas fa-quote-left fa-quote">”</div>
             {/* {names.map((names) => {
