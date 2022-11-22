@@ -1,14 +1,48 @@
 import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import request from 'superagent'
+import { fetchLetter } from '../actions/letter'
 
-function LoveLetter(props) {
+function LoveLetter() {
+  const names = useSelector((state) => state.name)
+  const letters = useSelector((state) => state.letter)
+  const dispatch = useDispatch()
+  console.log(names)
+  useEffect(() => {
+    //   // setIsLoading(true)
+    dispatch(fetchLetter())
+  }, [])
+
+  function handleSwitch(event) {
+    event.preventDefault()
+    dispatch(
+      fetchLetter((id) => {
+        if (id === names.length - 1) {
+          return 0
+        } else {
+          return id + 1
+        }
+      })
+    )
+  }
+
   //  using props to pass to Poem components
-  console.log(props)
+
   return (
     <div>
-      <p>Dear {props?.name1}</p>
-      <p>{props?.letter}</p>
-      <p>Love always, {props?.name2}</p>
+      <p>Dear {names[0]?.NameTwo}</p>
+      <p className="letter">
+        I read about this letter by {letters[0]?.poem_from} called '
+        {letters[0]?.poem_title}' and think about you.
+        <br></br>"{letters[0]?.poem_text}"
+      </p>
+      <p>
+        Love always,<br></br>
+        {names[0]?.NameOne}
+      </p>
+      <button className="button-30" onClick={handleSwitch}>
+        Next One
+      </button>
     </div>
   )
 }

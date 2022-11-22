@@ -1,4 +1,5 @@
 /*font */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;1,300&display=swap');
 
 *{margin: 0;
 padding: 0;}
@@ -129,5 +130,108 @@ button.submit{
   border-radius: 50%;
   top:0;
   right:-50%;
+}
 
+/* poem page */
+.Poem{background-image: url();
+  height: 100vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4vw;
+}
+
+.poem_container{
+background: rgba(101, 101, 101, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.4px);
+-webkit-backdrop-filter: blur(5.4px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+align-items: center;
+color: #fff;
+border-radius: 3em;
+margin: auto ;
+padding: 4vw 6vw;
+max-width: 500px;
+position: relative;
+}
+
+.letter {
+  margin-top: 1em;
+  line-height: 28px;
+  text-align: justify;
+  margin-bottom: 1em;
+ 
+  font-family: 'Titillium Web', sans-serif;
+font-size: 1vw;
+}
+button{font-family: 'Titillium Web', sans-serif;
+  font-size: 1vw;
+  
+}
+.fa-quote {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 28px;
+  position: absolute;
+  top: 70px;
+}
+.fa-quote-right {
+  left: 40px;
+}
+
+.fa-quote-left {
+  right: 40px;
+}
+
+.buttons{
+  margin-top: 10%;
+  display: flex;
+  justify-content:space-around;
+}
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 30px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 1vw;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
 }

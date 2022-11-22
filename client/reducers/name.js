@@ -15,7 +15,7 @@ const initialFoxState = []
 
 const name = (state = initialFoxState, action) => {
   const { type, payload } = action
-  console.log(payload)
+  // console.log(payload)
   switch (type) {
     case ADD_NAME:
       return [...state, payload]

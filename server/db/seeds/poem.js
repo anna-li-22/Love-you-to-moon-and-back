@@ -104,5 +104,16 @@ exports.seed = async function (knex) {
       poem_from: 'Love After Love',
       poem_type: 'Love',
     },
+    {
+      author_id: '5',
+      poem_id: '5',
+      poem_title: 'to John Adams',
+      poem_text: `My Dearest Friend,
+      …should I draw you the picture of my heart it would be what I hope you would still love though it contained nothing new. The early possession you obtained there, and the absolute power you have obtained over it, leaves not the smallest space unoccupied.
+      
+      I look back to the early days of our acquaintance and friendship as to the days of love and innocence, and, with an indescribable pleasure, I have seen near a score of years roll over our heads with an affection heightened and improved by time, nor have the dreary years of absence in the smallest degree effaced from my mind the image of the dear untitled man to whom I gave my heart.`,
+      poem_from: 'Abigail Adams ',
+      poem_type: 'Love',
+    },
   ])
 }

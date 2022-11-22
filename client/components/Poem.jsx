@@ -1,42 +1,71 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchImage } from '../actions'
+import { Link, Route, useNavigate } from 'react-router-dom'
 import { Navbar, Container } from 'react-bootstrap'
 import LoveLetter from './Loveletters.jsx'
-import { getPoem } from '../apis/universe'
+import { getUniverseImage, getPoem } from '../apis/universe'
 
 function Poem() {
-  let names = useSelector((state) => state)
+  // const names = useSelector((state) => state.name)
 
-  console.log(names)
-  // const { id } = useParams()
-  // const dispatch = useDispatch()
-  // useEffect(() => {
-  //   dispatch(fetchImage())
-  // }, [])
+  // console.log(names)
+  const [UniImage, setImage] = useState('')
+
+  // const names = useSelector((state) => state.name)
+  // const name = names[0]
+  // console.log(name)
+  // const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // setIsLoading(true)
+    getUniverseImage()
+      .then((sky) => {
+        setImage(sky)
+        // console.log(sky)
+      })
+      // .then(() => {
+      //   // setIsLoading(false)
+
+      // })
+      .catch((err) => {
+        err.message
+      })
+  }, [])
 
   return (
     <>
-      <div className="Poem">
+      <div
+        className="Poem"
+        style={{ backgroundImage: `url(${UniImage?.url})` }}
+      >
         <div className="poem_container">
-          <div className="Poem">
-            <div className="fas fa-quote-right fa-quote"></div>
-            <div className="fas fa-quote-left fa-quote"></div>
+          <div className="letter">
+            <div className="fas fa-quote-right fa-quote">“</div>
+            <div className="fas fa-quote-left fa-quote">”</div>
             {/* {names.map((names) => {
               return (
                 <> */}
             <p className="Letter">{/* database */}</p>
+
             <LoveLetter
-              name1={names.NameOne}
-              name2={names.NameTwo}
-              letter="testing"
+            // name1={names.NameOne}
+            // name2={names.NameTwo}
             />
+
             {/* </>
               )
             })} */}
             <div className="buttons">
-              <button>Print</button>
-              <button>Share</button>
+              <button className="button-30">Print</button>
+              <button className="button-30">Share</button>
+
+              <Link to="/Add">
+                <button className="button-30">Add Your Letter</button>
+              </Link>
+
+              <Link to="/">
+                <button className="button-30">Home</button>
+              </Link>
             </div>
           </div>
         </div>
