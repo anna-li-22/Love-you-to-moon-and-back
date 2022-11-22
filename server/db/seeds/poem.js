@@ -115,5 +115,48 @@ exports.seed = async function (knex) {
       poem_from: 'Abigail Adams ',
       poem_type: 'Love',
     },
+    {
+      author_id: '6',
+      poem_id: '6',
+      poem_title: 'First love letter to Arabella',
+      poem_text: `My dear Arabella,
+      A cultured land with heated fortunes, salt rains on dried opulence, let’s not waste love on time; yet the day may arrive when the mountains once moved, moved my mantels of love for thee;
+      thee dreams of what paradise might be, what a woman’s soul must see, don’t her prophets know as they have disdained her to endure;`,
+      poem_from: 'Shakespeare',
+      poem_type: 'Love',
+    },
+    {
+      author_id: '6',
+      poem_id: '7',
+      poem_title: 'Second love letter to Arabella',
+      poem_text: `My dear Arabella,
+      Feel not comfort in fields of sunflowers but in thy nestled grace where the seeds of true nectar produce such heirs of innocence, touch the truffles of my magnificent heartache;
+
+      She gazed in wonder “can he calmly sleep” while her eyes fell upon him or a ravage weep; what sudden spell makes me so dear; can we meet halfway so such magic does not disappear;`,
+      poem_from: 'Shakespeare',
+      poem_type: 'Love',
+    },
+    {
+      author_id: '6',
+      poem_id: '8',
+      poem_title: 'Third love letter to Arabella',
+      poem_text: `My dear Arabella,
+      Bring me nots to such have nots as my heart simply yearns for thee; wrap me in thy bosoms as when death wraps me in its shadows, I might simply die for thee;
+
+let the whistles not blow and the bells not sound a clouded mind; let rapture of such folly be forgotten as thy lips simply sense me;`,
+      poem_from: 'Shakespeare',
+      poem_type: 'Love',
+    },
+    {
+      author_id: '6',
+      poem_id: '9',
+      poem_title: 'Fourth love letter to Arabella',
+      poem_text: `My dear Arabella,
+      As ancient Rome rises to such grace, why does the charm soften in a hasty chase, my treasured thoroughbreds gallop willfully wild, sweats on their beaded skins near the torturous neap, chase the clouds to thy mountains so high, heartfelt cords felt down to the stony grounds, run free in a world of such indulgent eyes;
+
+Imprison me in thy affectionate grace and vow never to let go, take me to a ball and hold me there once again in a song that made my heart ache,`,
+      poem_from: 'Shakespeare',
+      poem_type: 'Love',
+    },
   ])
 }
