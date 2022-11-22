@@ -10,5 +10,6 @@ exports.seed = async function (knex) {
     { author_id: 2, author_name: 'Rita Dove' },
     { author_id: 3, author_name: 'Emily Brontë' },
     { author_id: 4, author_name: 'Derek Walcott' },
+    { author_id: 5, author_name: 'Abigail Adams ' },
   ])
 }

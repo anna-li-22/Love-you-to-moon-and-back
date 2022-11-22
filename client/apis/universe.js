@@ -1,26 +1,37 @@
 import request from 'superagent'
 
 // get data from database
-const rootUrl = '/api/v1/poems'
+const rootUrl = '/api/v1/poems/'
 
 export function getPoem() {
   return request.get(rootUrl).then((res) => {
-    console.log(res.body)
+    // console.log(res.body)
     return res.body
   })
 }
-export function getPoemById(id) {
-  return request.get(`${rootUrl}${id}`).then((res) => {
-    //console.log(res.body)
-    return res.body
-  })
+// export function getPoemById(id) {
+//   return request.get(`${rootUrl}${id}`).then((res) => {
+//     // console.log(res.body)
+//     return res.body
+//   })
+// }
+
+// add to the DB through routes
+export function savePoem(poemForm) {
+  return request
+    .post('/api/v1/poems/')
+    .send(poemForm)
+    .then((res) => {
+      console.log(res.body)
+      return res.body
+    })
 }
 
 // *** get backimage for letter page ***
 // external files
 export function getUniverseImage() {
   return request.get(`https://go-apod.herokuapp.com/apod`).then((res) => {
-    console.log(res.body)
+    // console.log(res.body)
     return res.body
   })
 }

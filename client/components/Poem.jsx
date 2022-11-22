@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, Route, useNavigate } from 'react-router-dom'
 import { Navbar, Container } from 'react-bootstrap'
 import LoveLetter from './Loveletters.jsx'
 import { getUniverseImage, getPoem } from '../apis/universe'
 
 function Poem() {
-  const [UniImage, setImage] = useState('')
-  const names = useSelector((state) => state.name)
+  // const names = useSelector((state) => state.name)
 
+  // console.log(names)
+  const [UniImage, setImage] = useState('')
+
+  // const names = useSelector((state) => state.name)
+  // const name = names[0]
+  // console.log(name)
   // const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -16,10 +21,11 @@ function Poem() {
     getUniverseImage()
       .then((sky) => {
         setImage(sky)
+        // console.log(sky)
       })
       // .then(() => {
       //   // setIsLoading(false)
-      //   // console.log()
+
       // })
       .catch((err) => {
         err.message
@@ -41,16 +47,24 @@ function Poem() {
                 <> */}
             <p className="Letter">{/* database */}</p>
 
-            <LoveLetter name1={names.NameOne} name2={names.NameTwo} letter="" />
+            <LoveLetter
+            // name1={names.NameOne}
+            // name2={names.NameTwo}
+            />
 
             {/* </>
               )
             })} */}
             <div className="buttons">
-              <button>Print</button>
-              <button>Share</button>
+              <button className="button-30">Print</button>
+              <button className="button-30">Share</button>
+
+              <Link to="/Add">
+                <button className="button-30">Add Your Letter</button>
+              </Link>
+
               <Link to="/">
-                <p>Home</p>
+                <button className="button-30">Home</button>
               </Link>
             </div>
           </div>
