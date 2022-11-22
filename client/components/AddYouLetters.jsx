@@ -53,19 +53,38 @@ export default function AddYouLetters() {
     <div className="Poem" style={{ backgroundImage: `url(${UniImage?.url})` }}>
       <div className="poem_container">
         <h1>Add your letter today</h1>
-        <form>
-          <label>Title</label>
-          <input type="text" name="poem_title" onChange={handleChange}></input>
-          <label>Letter</label>
-          <input type="text" name="poem_text" onChange={handleChange}></input>
-          <label>Written By</label>
-          <input type="text" name="poem_from" onChange={handleChange}></input>
-          <label>Type</label>
-          <input type="text" name="poem_type" onChange={handleChange}></input>
+        <form className='field-container"'>
+          <p>
+            <label>Title</label>
+            <input
+              type="text"
+              name="poem_title"
+              onChange={handleChange}
+            ></input>
+          </p>
+          <p>
+            <label>Letter</label>
+            <textarea
+              className="letter_enter"
+              type="text"
+              name="poem_text"
+              onChange={handleChange}
+            ></textarea>
+          </p>
+          <p>
+            <label>Written By</label>
+            <input type="text" name="poem_from" onChange={handleChange}></input>
+          </p>
+          <p>
+            <label>Type</label>
+            <input type="text" name="poem_type" onChange={handleChange}></input>
+          </p>
+        </form>
+        <div className="submit_box">
           <button className="button-30" onClick={handleSubmit}>
             Submit
           </button>
-        </form>
+        </div>
       </div>
     </div>
   )

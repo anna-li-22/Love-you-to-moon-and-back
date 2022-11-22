@@ -11,7 +11,14 @@ body{
   background-repeat: no-repeat;
 
 }
-
+/* triangle shapes switch */
+/* .triangle-left{
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-right: 100px solid red;
+  border-bottom: 50px solid transparent;
+} */
 
 /* name componets */
 .name_section{
@@ -21,7 +28,7 @@ body{
 }
 .content_container{
   flex: 1;
- margin: 20px;
+ margin: 4em;
  padding: 5px;
   align-content:center
 }
@@ -83,13 +90,51 @@ img{
 }
 .form_container{
   height: 200px;
-  position: relative;
+  /* position: relative; */
 
+}
+
+/*submitting form style */
+h1{
+  margin:1em;
+ text-align: center;
+}
+form.field-container{
+justify-content: center;
+text-align: center;
+}
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+form p{display: table-row;  
+
+}
+
+
+form label  {
+  display: flex;
+}
+form input textarea { 
+  display: flex;
+ margin: 3em;
+/* width: 8em; */
+width: 300px;
+height: 30px;
+}
+.letter_enter{
+ height: 20vh;
+}
+.submit_box{
+  justify-content: center;
+  margin:auto;
+  text-align: center;
+  padding: 1em;
 }
 
 /* button */
 button.submit{  
-  position: absolute;
+  position: relative;
   top:30%;
   left: 70%;
   width: 70px;
@@ -144,7 +189,7 @@ button.submit{
 
 .poem_container{
 background: rgba(101, 101, 101, 0.1);
-border-radius: 16px;
+border-radius: 2em;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(5.4px);
 -webkit-backdrop-filter: blur(5.4px);
@@ -152,9 +197,10 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 align-items: center;
 color: #fff;
 border-radius: 3em;
-margin: auto ;
-padding: 4vw 6vw;
-max-width: 500px;
+margin: auto;
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+padding: 4vw 5vw;
+max-width: 40%;
 position: relative;
 }
 
@@ -167,7 +213,8 @@ position: relative;
   font-family: 'Titillium Web', sans-serif;
 font-size: 1vw;
 }
-button{font-family: 'Titillium Web', sans-serif;
+button{
+  font-family: 'Titillium Web', sans-serif;
   font-size: 1vw;
   
 }
@@ -184,14 +231,15 @@ button{font-family: 'Titillium Web', sans-serif;
 .fa-quote-left {
   right: 40px;
 }
-
+ 
 .buttons{
-  margin-top: 10%;
+ 
   display: flex;
   justify-content:space-around;
-}
+} 
 
 .button-30 {
+  margin: 1em;
   align-items: center;
   appearance: none;
   background-color: #FCFCFD;
